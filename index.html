@@ -44,6 +44,10 @@
       left: 110px; top: 77px;
       text-shadow: 2px 2px 4px #000;
       opacity: 0;
+    }
+
+    /* play class: 애니메이션 재생 상태 */
+    header > h1 > span:first-child.play {
       animation-name: title;
       animation-duration: 10s;
       animation-iteration-count: infinite;
@@ -56,6 +60,9 @@
       left: 56px; top: 157px;
       text-shadow: 2px 2px 4px #000;
       opacity: 0;
+    }
+
+    header > h1 > span:last-child.play {
       animation-name: title;
       animation-duration: 10s;
       animation-iteration-count: infinite;
@@ -91,11 +98,14 @@
   </div>
 
   <script>
-    // 배너 전체 하이퍼링크 기능
-    const banner = document.querySelector('.banner');
-    banner.addEventListener('click', function(){
-      location.href = 'https://www.amazon.com/Fresh-Coffee-Beans/s?k=Fresh+Coffee+Beans';
-    })
+    // 문서와 관련 파일들이 로딩 완료 됨을 채크하는 이벤트
+    window.onload = function(){
+      // alert('문서 및 파일 로드 완료!');
+      var title1 = document.querySelector('header > h1 > span:first-child');
+      var title2 = document.querySelector('header > h1 > span:last-child');
+      title1.setAttribute('class', 'play');
+      title2.setAttribute('class', 'play');
+    }
   </script>
 </body>
 </html>
