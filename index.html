@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션 배너 result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="main-banner">
+      <div class="main-banner-title">
+        <h2 class="fade-in">
+          걸을때 마다 돈이 쌓이는<br> 
+          스마트한 건강관리를 해보세요
+        </h2>
+        <a href="#" class="cta-btn fade-in">더보기</a>
+      </div>
+      <img class="main-banner-img" src="images/title-img.png" alt="title image">
+  </section>
+
+  <!-- 04.콘텐츠로딩후재생 -->
+  <script>
+    // window.addEventListener('load', function(){
+    //   alert('콘텐츠 로딩 완료')
+    // });
+
+    /* 콘텐츠가 준비되면 화면 보여주기 */
+    document.body.classList.add('loading');
+
+    window.addEventListener('load', function(){
+      document.body.classList.remove('loading')
+    });
+
+  </script>
+
+</body>
+</html>
